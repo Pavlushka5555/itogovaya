@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+
+    @media screen and (max-width: 438px) {
+        font-size: 8px;
+    }
+}
+
+header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: .25rem;
+
+    &>h1 {
+        font-size: 3rem;
+    }
+
+    &>h2 {
+        font-size: 1.75rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        &>h1 {
+            font-size: 1.25rem;
+        }
+
+        &>h2 {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+header, footer {
+    background-color: #151515;
+    padding: 1rem;
+    border-radius: 25px 10px 15px 10px
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #080808;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    gap: .25rem;
+    height: 100vh;
+}
+
+body main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#goToDocs {
+    background-color: #146ef5;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #467ac7;
+    border-radius: 4px;
+    flex: none;
+    padding: 1em 1.5em;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background-color .3s cubic-bezier(.165, .84, .44, 1), box-shadow .3s cubic-bezier(.165, .84, .44, 1);
+    box-shadow: 0 4px 4px rgba(8, 8, 8, .08), 0 1px 2px rgba(8, 8, 8, .2), inset 0 6px 12px rgba(255, 255, 255, .12), inset 0 1px 1px rgba(255, 255, 255, .2);
+
+
+}
+
+#goToDocs:hover {
+    background-color: #0055d4;
+    box-shadow: 0 1px 1px rgba(8, 8, 8, .08), 0 1px 1px rgba(8, 8, 8, .2), inset 0 6px 12px rgba(255, 255, 255, .12), inset 0 1px 1px rgba(255, 255, 255, .2);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -11;
+}
